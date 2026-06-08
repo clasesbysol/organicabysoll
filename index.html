@@ -4465,4 +4465,87 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 </style>
+  <!-- BOTÓN FLOTANTE — IR AL ÍNDICE MAESTRO DE REACCIONES -->
+<a id="floatingMasterIndexBtn" href="#indice-maestro-reacciones" title="Ir al índice maestro de reacciones" aria-label="Ir al índice maestro de reacciones">
+  <svg viewBox="0 0 100 100" aria-hidden="true">
+    <polygon points="50,8 86,29 86,71 50,92 14,71 14,29"></polygon>
+    <circle cx="50" cy="50" r="22"></circle>
+  </svg>
+</a>
+
+<style>
+  #floatingMasterIndexBtn {
+    position: fixed !important;
+    right: 18px !important;
+    bottom: 76px !important;
+    width: 48px !important;
+    height: 48px !important;
+    border: none !important;
+    border-radius: 999px !important;
+    background: rgba(79, 70, 229, 0.92) !important;
+    color: #fff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,.22) !important;
+    cursor: pointer !important;
+    z-index: 100000 !important;
+    opacity: 0.92 !important;
+    transition: transform .15s ease, opacity .15s ease, background .15s ease !important;
+    text-decoration: none !important;
+  }
+
+  #floatingMasterIndexBtn:hover {
+    transform: translateY(-2px) !important;
+    opacity: 1 !important;
+    background: rgba(67, 56, 202, 0.98) !important;
+  }
+
+  #floatingMasterIndexBtn:active {
+    transform: translateY(0) !important;
+  }
+
+  #floatingMasterIndexBtn svg {
+    width: 29px !important;
+    height: 29px !important;
+    display: block !important;
+  }
+
+  #floatingMasterIndexBtn polygon,
+  #floatingMasterIndexBtn circle {
+    fill: none !important;
+    stroke: #ffffff !important;
+    stroke-width: 7 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+  }
+
+  @media (max-width: 780px) {
+    #floatingMasterIndexBtn {
+      right: 12px !important;
+      bottom: 62px !important;
+      width: 44px !important;
+      height: 44px !important;
+    }
+
+    #floatingMasterIndexBtn svg {
+      width: 27px !important;
+      height: 27px !important;
+    }
+  }
+</style>
+
+<script>
+  document.getElementById("floatingMasterIndexBtn").addEventListener("click", function () {
+    const indice = document.getElementById("indice-maestro-reacciones");
+
+    if (indice) {
+      const detalles = indice.querySelectorAll("details");
+      detalles.forEach(function (detalle) {
+        detalle.open = true;
+      });
+    }
+  });
+</script>
+
 </html>
