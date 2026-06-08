@@ -4397,4 +4397,72 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <button aria-label="Volver a la ubicación anterior" disabled="" id="floatingBackBtn" title="Volver a la ubicación anterior" type="button">↩</button>
 </body>
+  <!-- BOTÓN FLOTANTE — VOLVER AL ÍNDICE MAESTRO DE REACCIONES -->
+<a href="#indice-maestro-reacciones" class="floating-master-index" title="Ir al índice maestro de reacciones" aria-label="Ir al índice maestro de reacciones">
+  <svg class="benzene-icon" viewBox="0 0 100 100" aria-hidden="true">
+    <polygon points="50,8 86,29 86,71 50,92 14,71 14,29"></polygon>
+    <circle cx="50" cy="50" r="22"></circle>
+  </svg>
+</a>
+
+<style>
+  .floating-master-index {
+    position: fixed;
+    right: 22px;
+    bottom: 92px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #9b5de5, #6d28d9);
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 10px 26px rgba(76, 29, 149, 0.35);
+
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+
+  .floating-master-index:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 14px 32px rgba(76, 29, 149, 0.45);
+    filter: brightness(1.05);
+  }
+
+  .floating-master-index:active {
+    transform: translateY(0) scale(0.97);
+  }
+
+  .floating-master-index .benzene-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .floating-master-index .benzene-icon polygon,
+  .floating-master-index .benzene-icon circle {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  @media (max-width: 768px) {
+    .floating-master-index {
+      right: 16px;
+      bottom: 86px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .floating-master-index .benzene-icon {
+      width: 29px;
+      height: 29px;
+    }
+  }
+</style>
 </html>
